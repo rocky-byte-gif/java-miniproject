@@ -9,3 +9,22 @@
 @layer base {
   button:not(:disabled), [role="button"] { cursor: pointer; }
 }
+
+/* Print Styles for Prescriptions & Invoices */
+@media print {
+  aside, nav, header, button, .no-print {
+    display: none !important;
+  }
+  body, main {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  #prescription-print-area, #invoice-print-area {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+}
